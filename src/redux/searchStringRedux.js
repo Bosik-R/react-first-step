@@ -1,5 +1,5 @@
 // selectors
-export const getSearchString = (state) => state.searchString;
+export const getSearchString = (searchState) => searchState.searchString;
 
 export const countAllCards = ({cards}) => cards.length;
 
