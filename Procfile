@@ -1,1 +1,1 @@
-npm run server
+web: http-server dist
