@@ -1,11 +1,11 @@
 /* eslint-disable no-mixed-spaces-and-tabs */
 import React from 'react';
+import { settings } from '../../data/dataStore';
 import PropTypes from 'prop-types';
+import Creator from '../Creator/Creator';
 import styles from './Column.scss';
 import Icon from '../Icon/Icon';
 import Card from '../Card/Card';
-//import Creator from '../Creator/Creator';
-//import {settings} from '../../data/dataStore';
 
 class Column extends React.Component {
 	static propTypes = {
@@ -13,10 +13,15 @@ class Column extends React.Component {
 	  name: PropTypes.node,
 	  cards: PropTypes.array,
 	  icon: PropTypes.node,
+	  addCard: PropTypes.func,
 	}
-  
+	
+	static defaultProps = {
+		 icon: settings.defaultColumnIcon,
+	}
+
 	render() {
-	  const {title, icon, cards} = this.props;
+	  const {title, icon, cards, addCard} = this.props;
 	  return (
 	    <section className={styles.component}>
 	      <h3 className={styles.title}>{title}
@@ -29,14 +34,12 @@ class Column extends React.Component {
 	          <Card key={cardData.id} {...cardData} />
 	        ))}
 	      </div>
-	      {/*
 	      <div className={styles.creator}>
 	        <Creator 
 	          text={settings.cardCreatorText} 
-	          action={title => this.addCard(title)}
+	          action={addCard}
 	        />
 	      </div>
-				*/}
 	    </section>
 	  );
 	}
