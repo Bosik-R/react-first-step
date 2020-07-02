@@ -2,7 +2,7 @@ import React from 'react';
 import styles from './App.scss';
 import PropTypes from 'prop-types';
 import  List from '../List/ListContainer';
-//import { listData } from '../../data/dataStore';
+import Search from '../Search/SearchContainer';
 
 class App extends React.Component {
   static propTypes = {
@@ -20,6 +20,7 @@ class App extends React.Component {
         {lists.map(listData => (
           <List key={listData.id} {...listData} />
         ))}
+        <Search />
       </main>
     );
   }
