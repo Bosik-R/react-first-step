@@ -92,6 +92,18 @@ const lists = [
     description: 'Interesting things I want to check out!',
     image: 'http://uploads.kodilla.com/bootcamp/fer/11.react/space.png',
   },
+  {
+    id: 'list-2',
+    title: 'Things i have done so far',
+    description: 'Interesting things I hav done in past Year!',
+    image: 'https://images.pexels.com/photos/3283186/pexels-photo-3283186.jpeg?auto=compress&cs=tinysrgb&h=650&w=940',
+  },
+  {
+    id: 'list-3',
+    title: 'Things i am doing now',
+    description: 'Interesting things I am doing right now!',
+    image: 'https://images.pexels.com/photos/601798/pexels-photo-601798.jpeg?auto=compress&cs=tinysrgb&h=650&w=940',
+  },
 ];
 
 const columns = [
@@ -116,7 +128,7 @@ const columns = [
   {
     id: 'column-4',
     listId: 'list-2',
-    title: 'Strange column',
+    title: 'Movies seen',
     icon: 'question',
   },
 ];
@@ -149,7 +161,7 @@ const cards = [
   },
   {
     id: 'card-6',
-    columnId: 'column-3',
+    columnId: 'column-4',
     title: 'Skyrim',
   },
 ];

@@ -9,7 +9,6 @@ import Creator from '../Creator/Creator';
 import Container from '../Container/Container';
 
 class List extends React.Component {
-  
   static propTypes = {
     title: PropTypes.node.isRequired,
     image: PropTypes.node,
@@ -20,6 +19,7 @@ class List extends React.Component {
 
   render() {
     const {title, image, description, columns, addColumn} = this.props;
+    
     return (
       <Container>
         <section className={styles.component}>
