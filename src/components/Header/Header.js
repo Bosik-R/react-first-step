@@ -6,28 +6,22 @@ import Icon from '../Icon/Icon';
 import {settings} from '../../data/dataStore';
 import Search from '../Search/SearchContainer';
 
-class Header extends React.Component {
+const Header =() => (
+  <header className={styles.component}>
+    <Container>
+      <div className={styles.wrapper}>
+        <Link className={styles.logo} to='/'>
+          <Icon name={settings.logoIconName} />
+        </Link>
+        <nav>
+          <NavLink exact to ='/' activeClassName = 'active'>Home</NavLink>
+          <NavLink exact to ='/info' activeClassName = 'active'>Info</NavLink>
+          <NavLink exact to = '/faq' activeClassName = 'active'>FAQ</NavLink>
+        </nav>
+      </div>
+      <Search />
+    </Container>
+  </header>
+);
   
-  render() {
-
-    return (
-      <header className={styles.component}>
-        <Container>
-          <div className={styles.wrapper}>
-            <Link className={styles.logo} to='/'>
-              <Icon name={settings.logoIconName} />
-            </Link>
-            <nav>
-              <NavLink exact to ='/' activeClassName = 'active'>Home</NavLink>
-              <NavLink exact to ='/info' activeClassName = 'active'>Info</NavLink>
-              <NavLink exact to = '/faq' activeClassName = 'active'>FAQ</NavLink>
-            </nav>
-          </div>
-          <Search />
-        </Container>
-      </header>
-    );
-  }
-}
-
 export default Header;

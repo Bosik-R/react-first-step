@@ -25,7 +25,7 @@ class SearchResults extends React.Component {
 	
 	render() {
 	  const {cards} = this.props;
-		
+
 	  return (
 	    <Container>
 	      <p>wynik szukania</p>

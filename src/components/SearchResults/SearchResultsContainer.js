@@ -5,9 +5,13 @@ import {
   getCardsFromSearch,
 } from '../../redux/searchStringRedux';
 
-const mapStateToProps = (state) =>({
+//const mapStateToProps = (state) =>({
+//  cards: getCardsFromSearch(state),
+//});
+const mapStateToProps = (state) => ({
   cards: getCardsFromSearch(state),
 });
+
 
 const mapDispatchToProps = (dispatch) => ({
   changeSearchString: newSearchString => dispatch(createAction_changeSearchString(newSearchString)),

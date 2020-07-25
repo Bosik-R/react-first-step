@@ -11,7 +11,6 @@ export const getCardsFromSearch = ({cards, columns, searchString}) =>
 export const mapCards = ({cards, columns}) => {
   return cards.map(card => {
     const filteredColumns = columns.filter(column => column.id === card.columnId);
-
     return {
       ...card,
       listId: filteredColumns[0].listId,
