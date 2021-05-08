@@ -13,13 +13,13 @@ const Header =() => (
         <Link className={styles.logo} to='/'>
           <Icon name={settings.logoIconName} />
         </Link>
+        <Search />
         <nav>
           <NavLink exact to ='/' activeClassName = 'active'>Home</NavLink>
           <NavLink exact to ='/info' activeClassName = 'active'>Info</NavLink>
           <NavLink exact to = '/faq' activeClassName = 'active'>FAQ</NavLink>
         </nav>
       </div>
-      <Search />
     </Container>
   </header>
 );

@@ -11,6 +11,10 @@
   margin-bottom: $base-size;
   border-radius: $radius;
   box-shadow: 0 ($base-size / 4) 0 rgba(0,0,0,0.3);
+
+  @media (max-width: 767px) {
+    flex-direction: column;
+  }
 }
 
 .text {

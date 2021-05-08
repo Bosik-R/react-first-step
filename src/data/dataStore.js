@@ -1,7 +1,7 @@
 export const settings = {
   columnCreatorText: 'Add new column',
   cardCreatorText: 'Add new card',
-  logoIconName: 'battery-half',
+  logoIconName: 'list-alt',
   creator: {
     buttonOK: 'OK',
     buttonCancel: 'Cancel',

@@ -12,18 +12,18 @@ import SearchResults from '../SearchResults/SearchResultsContainer';
 const App = () => (
   <BrowserRouter>
     <MainLayout>
-    	<AnimatedSwitch
+      <AnimatedSwitch
         atEnter={{ opacity: 0 }}
         atLeave={{ opacity: 0 }}
         atActive={{ opacity: 1 }}
         className={styles.switchWrapper}
       >
-    	  <Route exact path='/' component={Home} />
-    	  <Route exact path='/info' component={Info} />
+        <Route exact path='/' component={Home} />
+        <Route exact path='/info' component={Info} />
         <Route exact path='/faq' component={Faq} />
         <Route exact path='/list/:id' component={List} />
         <Route exact path='/search/:searchString' component={SearchResults} />
-    	</AnimatedSwitch>
+      </AnimatedSwitch>
     </MainLayout>
   </BrowserRouter>
 );

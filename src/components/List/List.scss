@@ -12,14 +12,17 @@
 .columns {
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
   overflow: auto;
 }
 
 .creator {
-  width: calc(33% - 12px);
+  display: flex;
+  justify-content: flex-start;
   margin: $base-size auto 0;
-
+  
   input {
+    width: 30%;
     box-shadow: 0 3px 0 rgba(0, 0, 0, 0.3);
   }
 }
@@ -29,9 +32,5 @@
   .columns {
     flex-direction: column;
     overflow: hidden;
-  }
-
-  .creator {
-    width: 100%;
   }
 }
